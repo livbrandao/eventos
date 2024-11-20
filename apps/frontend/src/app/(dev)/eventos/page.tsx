@@ -12,7 +12,7 @@ export default function PaginaEventos() {
           key={evento.id}
           className="bg-zinc-800 rounded-lg flex flex-col w-full overflow-hidden"
         >
-          <div className="relative w-full h-44">
+          <div className="relative w-full h-52">
             <Image
               src={evento.imagem}
               fill
@@ -20,11 +20,9 @@ export default function PaginaEventos() {
               className="object-cover"
             />
           </div>
-          <div className="flex-1 flex flex-col items-center p-7 gap-3">
+          <div className="flex-1 flex flex-col items-center p-7 gap-3 text-center">
             <span className="text-lg font-black">{evento.nome}</span>
-            <p className="flex-1 text-sm text-zinc-400 text-center">
-              {evento.descricao}
-            </p>
+            <p className="flex-1 text-sm text-zinc-400 ">{evento.descricao}</p>
 
             <QRCode
               value={JSON.stringify({ id: evento.id, senha: evento.senha })}
@@ -39,7 +37,7 @@ export default function PaginaEventos() {
                 Admin
               </Link>
               <Link
-                href={`/convite/admin/${evento.alias}`}
+                href={`/convite/${evento.alias}`}
                 className="button secondary flex-1"
               >
                 Convite

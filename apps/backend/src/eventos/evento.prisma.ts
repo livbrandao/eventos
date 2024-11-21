@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import { Convidado, Evento } from 'core';
 import { PrismaProvider } from 'src/db/prisma.provider';
-import { Convidado, Evento, Id } from 'core';
 
 @Injectable()
 export class EventoPrisma {
@@ -8,7 +8,10 @@ export class EventoPrisma {
 
   salvar(evento: Evento) {
     return this.prisma.evento.create({
-      data: evento as any,
+      data: {
+        ...(evento as any),
+        convidados: { create: evento.convidados },
+      },
     });
   }
 

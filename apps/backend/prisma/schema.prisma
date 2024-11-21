@@ -32,7 +32,7 @@ model Convidado {
   email               String
   confirmado          Boolean
   possuiAcompanhantes Boolean
-  qtdeAcompanhantes  Int
+  qtdeAcompanhantes   Int
   evento              Evento? @relation(fields: [eventoId], references: [id])
   eventoId            String?
 

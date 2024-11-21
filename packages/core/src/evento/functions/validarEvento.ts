@@ -4,7 +4,7 @@ export default function validarEvento(evento: Partial<Evento>): string[] {
   const erros: string[] = [];
 
   if (!evento.alias) {
-    erros.push("Descrição é obrigatória");
+    erros.push("Alias é obrigatório");
   }
 
   if (!evento.nome) {

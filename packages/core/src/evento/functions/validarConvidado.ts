@@ -8,8 +8,10 @@ export default function validarConvidado(
   if (!convidado.nome) {
     erros.push("Nome é obrigatório");
   }
+
   if (!convidado.email) {
-    erros.push("Email é obrigatório");
+    erros.push("E-mail é obrigatório");
   }
+
   return erros;
 }

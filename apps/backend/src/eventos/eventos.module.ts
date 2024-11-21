@@ -1,7 +1,6 @@
-import { Evento } from 'core';
 import { Module } from '@nestjs/common';
-import { DbModule } from 'src/db/db.module';
 import { EventosController } from './eventos.controller';
+import { DbModule } from 'src/db/db.module';
 import { EventoPrisma } from './evento.prisma';
 
 @Module({

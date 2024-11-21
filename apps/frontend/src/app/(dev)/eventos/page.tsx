@@ -1,8 +1,7 @@
-import eventos from "@/core/constants/eventos";
+import { eventos } from "core";
 import Image from "next/image";
 import Link from "next/link";
 import QRCode from "react-qr-code";
-import { json } from "stream/consumers";
 
 export default function PaginaEventos() {
   return (

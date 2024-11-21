@@ -1,4 +1,4 @@
-import { Convidado, Id } from "@/core";
+import Convidado from "../model/Convidado";
 import validarConvidado from "./validarConvidado";
 
 export default function processarConvidado(

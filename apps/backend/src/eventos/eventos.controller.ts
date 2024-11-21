@@ -1,8 +1,29 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
-import { Convidado, Data, Evento, eventos, Id } from 'core';
+import {
+  ComplementarConvidado,
+  ComplementarEvento,
+  Convidado,
+  Data,
+  Evento,
+  eventos,
+  Id,
+} from 'core';
+import e from 'express';
 
 @Controller('eventos')
 export class EventosController {
+  @Post()
+  async salvarEvento(@Body() evento: Evento) {
+    const evendoCadastrato = eventos.find((ev) => ev.alias === evento.alias);
+    if (evendoCadastrato && evendoCadastrato.id !== evento.id) {
+      throw new Error('Evento já cadastrado com esse alias!');
+    }
+
+    const eventoCompleto = ComplementarEvento(this.deserializar(evento));
+    eventos.push(eventoCompleto);
+    return this.serializar(eventoCompleto);
+  }
+
   @Post(':alias/convidados')
   async salvarConvidado(
     @Param('alias') alias: string,
@@ -13,7 +34,7 @@ export class EventosController {
       throw new Error('Evento não encontrado!');
     }
 
-    evento.convidados.push(convidado);
+    evento.convidados.push(ComplementarConvidado(convidado));
     return this.serializar(evento);
   }
 

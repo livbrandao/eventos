@@ -39,7 +39,7 @@ export default function PaginaConvite(props: any) {
             convidadoMudou={alterarConvidado}
           />
           <button
-            className={`botao self-center ${convidado.confirmado ? "verde" : "vermelho"}`}
+            className={`button self-center ${convidado.confirmado ? "secondary" : "tertiary"}`}
             onClick={adicionarConvidado}
           >
             Confirmar {convidado.confirmado ? "Presença" : "Ausência"}

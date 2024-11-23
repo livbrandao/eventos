@@ -32,13 +32,13 @@ export default function PaginaEventos() {
             <div className="flex gap-5">
               <Link
                 href={`/evento/admin/${evento.id}/${evento.senha}`}
-                className="flex-1 botao vermelho"
+                className="flex-1 button tertiary"
               >
                 Admin
               </Link>
               <Link
                 href={`/convite/${evento.alias}`}
-                className="flex-1 botao verde"
+                className="flex-1 button secondary"
               >
                 Convite
               </Link>

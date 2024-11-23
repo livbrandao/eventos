@@ -66,7 +66,7 @@ export default function Passos(props: PassosProps) {
         <button
           onClick={passoAnterior}
           className={`
-            botao
+            button
             ${
               semPassoAnterior()
                 ? "bg-zinc-400 cursor-not-allowed opacity-50 py-1 px-3 rounded-sm"
@@ -82,11 +82,11 @@ export default function Passos(props: PassosProps) {
             onClick={props.acao}
             disabled={!permiteProximoPasso}
             className={`
-                botao 
+                button 
                 ${
                   !permiteProximoPasso
-                    ? "bg-zinc-400 cursor-not-allowed opacity-50"
-                    : "bg-green-700 hover:bg-green-600 text-white"
+                    ? "bg-zinc-400 cursor-not-allowed opacity-50 py-1 px-3 rounded-sm"
+                    : "bg-green-700 hover:bg-green-600 text-white py-1 px-3 rounded-sm"
                 }
             `}
           >
@@ -97,7 +97,7 @@ export default function Passos(props: PassosProps) {
             onClick={proximoPasso}
             disabled={!permiteProximoPasso || semProximoPasso()}
             className={`
-            botao
+            button
             ${
               !permiteProximoPasso || semProximoPasso()
                 ? "bg-zinc-400 cursor-not-allowed opacity-50 py-1 px-3 rounded-sm"

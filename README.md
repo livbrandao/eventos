@@ -36,11 +36,11 @@ Certifique-se de ter as ferramentas abaixo instaladas:
    cd projeto-convite-digital
     ```
 2. **Instale as dependências**:
-  ```bash
+   ```bash
   npm install
   # ou
   yarn install
-```
+      ```
 3. Configure as variáveis de ambiente: Crie um arquivo .env baseado no modelo .env.example e preencha com suas credenciais.
 
 4. Execute o Backend:
@@ -52,22 +52,23 @@ Certifique-se de ter as ferramentas abaixo instaladas:
   npm run start
   ```
 6.Banco de Dados: Certifique-se de ter o banco configurado e migrações aplicadas:
-```bash
-npm run migrate
-```
+   ```bash
+   npm run migrate
+   ```
 7. Mobile (opcional): Siga as instruções no diretório mobile para configurar o ambiente e executar o aplicativo.
 
 8. Deploy na AWS: Utilize os comandos do AWS CLI ou pipeline configurado para publicar a aplicação.
 
 ## 📁 Estrutura do Projeto
-
-projeto-convite-digital/
-├── backend/        # Código-fonte do servidor (API)
-├── frontend/       # Código-fonte do Frontend
-├── mobile/         # Código-fonte do aplicativo Mobile
-├── database/       # Scripts de migração e configuração do Banco de Dados
-├── deploy/         # Arquivos relacionados ao deploy na AWS
-└── README.md       # Documentação do projeto
+ ```bash
+   projeto-convite-digital/
+   ├── backend/        # Código-fonte do servidor (API)
+   ├── frontend/       # Código-fonte do Frontend
+   ├── mobile/         # Código-fonte do aplicativo Mobile
+   ├── database/       # Scripts de migração e configuração do Banco de Dados
+   ├── deploy/         # Arquivos relacionados ao deploy na AWS
+   └── README.md       # Documentação do projeto
+ ```
 
 ## 🌟 Sobre o Curso
 O curso "Formação Dev" pela Cod3r, foi uma imersão de uma semana com foco em ensinar o desenvolvimento de soluções fullstack. Durante o curso, foram abordadas as melhores práticas de desenvolvimento, integração de serviços e deploy na nuvem.

@@ -12,8 +12,7 @@ export default function TabsLayout() {
       tabBarInactiveTintColor: colors.zinc[400],
       tabBarStyle: {
         backgroundColor: colors.zinc[950],
-        borderTopColor: colors.zinc[950],
-        borderTopWidth: 10,
+        borderTopWidth: 0,
       },
 
       tabBarIcon: ({ focused }: any) => (

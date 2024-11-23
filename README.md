@@ -37,27 +37,27 @@ Certifique-se de ter as ferramentas abaixo instaladas:
     ```
 2. **Instale as dependências**:
    ```bash
-  npm install
-  # ou
-  yarn install
-      ```
-3. Configure as variáveis de ambiente: Crie um arquivo .env baseado no modelo .env.example e preencha com suas credenciais.
+   npm install
+   # ou
+   yarn install
+   ```
+3. **Configure as variáveis de ambiente: Crie um arquivo .env baseado no modelo .env.example e preencha com suas credenciais**.
 
-4. Execute o Backend:
+4. **Execute o Backend**:
   ```bash
   npm run server
   ```
-5. Execute o Frontend:
+5. **Execute o Frontend**:
   ```bash
   npm run start
   ```
-6.Banco de Dados: Certifique-se de ter o banco configurado e migrações aplicadas:
+6. **Banco de Dados: Certifique-se de ter o banco configurado e migrações aplicadas**:
    ```bash
    npm run migrate
    ```
-7. Mobile (opcional): Siga as instruções no diretório mobile para configurar o ambiente e executar o aplicativo.
+7. **Mobile (opcional): Siga as instruções no diretório mobile para configurar o ambiente e executar o aplicativo**.
 
-8. Deploy na AWS: Utilize os comandos do AWS CLI ou pipeline configurado para publicar a aplicação.
+8. **Deploy na AWS: Utilize os comandos do AWS CLI ou pipeline configurado para publicar a aplicação**.
 
 ## 📁 Estrutura do Projeto
  ```bash

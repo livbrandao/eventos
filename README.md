@@ -1,4 +1,4 @@
-# Projeto Convite Digital 🎉
+# Projeto Convite Digital 📨
 
 Este projeto é uma aplicação completa de gerenciamento de eventos, desenvolvida durante o curso **"Desenvolva uma aplicação de gerenciamento de eventos"**. A solução fullstack integra tecnologias modernas para oferecer uma experiência completa, desde o Frontend até o Backend, Banco de Dados, Mobile e deploy na AWS.
 

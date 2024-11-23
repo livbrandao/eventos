@@ -9,6 +9,7 @@ export interface DashboardEventoProps {
   presentes: Convidado[];
   ausentes: Convidado[];
   totalGeral: number;
+  atualizarListaConvidados: () => void;
 }
 
 export default function DashboardEvento(props: DashboardEventoProps) {
@@ -20,7 +21,7 @@ export default function DashboardEvento(props: DashboardEventoProps) {
       </div>
       <div className="grid grid-cols-3 gap-6 mt-4">
         <Estatistica
-          texto="Expectativa de convidados:"
+          texto="Expectativa de Convidados:"
           valor={props.evento.publicoEsperado}
           imagem="/icones/convidados.svg"
         />
@@ -30,14 +31,17 @@ export default function DashboardEvento(props: DashboardEventoProps) {
           imagem="/icones/confirmados.svg"
         />
         <Estatistica
-          texto="Total confirmado:"
+          texto="Total Confirmado:"
           valor={props.totalGeral}
           imagem="/icones/acompanhantes.svg"
         />
       </div>
 
-      <button className="button primary self-end mt-12">
-        <span>Atualizar lista de convidados</span>
+      <button
+        className="botao azul self-end mt-12"
+        onClick={props.atualizarListaConvidados}
+      >
+        <span>Atualizar Lista de Convidados</span>
       </button>
 
       <span className="flex py-2 text-xl font-bold text-white/80">
@@ -46,7 +50,7 @@ export default function DashboardEvento(props: DashboardEventoProps) {
       <ListaConvidados convidados={props.presentes} />
 
       <span className="flex py-2 text-xl font-bold text-white/80">
-        Convidados que estarão AUSENTES
+        Convidados que confirmaram AUSÊNCIA
       </span>
       <ListaConvidados convidados={props.ausentes} />
     </div>

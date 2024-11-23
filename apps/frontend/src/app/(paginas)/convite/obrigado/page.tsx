@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PaginaObrigado() {
   return (
@@ -13,6 +14,9 @@ export default function PaginaObrigado() {
       <span className="text-zinc-400 -mt-5">
         Sua confirmação é muito importante para nós!
       </span>
+      <Link href="/eventos" className="button primary text-sm uppercase">
+        Ver eventos
+      </Link>
     </div>
   );
 }

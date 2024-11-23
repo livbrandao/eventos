@@ -44,13 +44,13 @@ Certifique-se de ter as ferramentas abaixo instaladas:
 3. **Configure as variáveis de ambiente: Crie um arquivo .env baseado no modelo .env.example e preencha com suas credenciais**.
 
 4. **Execute o Backend**:
-  ```bash
-  npm run server
-  ```
+   ```bash
+   npm run server
+   ```
 5. **Execute o Frontend**:
-  ```bash
-  npm run start
-  ```
+   ```bash
+   npm run start
+   ```
 6. **Banco de Dados: Certifique-se de ter o banco configurado e migrações aplicadas**:
    ```bash
    npm run migrate
